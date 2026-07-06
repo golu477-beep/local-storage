@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Login from './commiter/Login'
 import Register from './commiter/Register'
+import Admin from './commiter/Admin'
 import Home from './pages/Home'
 
 import Layout from "./Layout"
@@ -14,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-           
+             <Route path="admin" element={<Admin/>}/>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register/>}/>
           </Route>
